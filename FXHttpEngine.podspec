@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FXHttpEngine"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "http引擎"
 
   s.homepage     = "https://github.com/zqw87699/FXHttpEngine"
@@ -22,10 +22,14 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/*'
   s.public_header_files = 'Classes/*.h'
 
+s.subspec 'API' do |api|
+    api.source_files = 'Classes/API/*'
+    api.public_header_files = 'Classes/API/*.h'
+
+end
+
   s.dependency "FXLog"
-  s.dependency "FXHttpAPI"
-  s.dependency "FXCommon/Utiles"
-  s.dependency "FXCommon/Core"
+  s.dependency "FXUtils"
   s.dependency "ReactiveObjC", '2.1.2'
   s.dependency "AFNetworking", '3.1.0'
 

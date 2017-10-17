@@ -10,9 +10,9 @@
 #import "FXHttpConfig.h"
 #import "AFHTTPSessionManager.h"
 #import "IFXUploadFileInfo.h"
-#import "FXCommon.h"
 #import "IFXHttpFilter.h"
 #import "ReactiveObjC.h"
+#import "FXUtils.h"
 
 @interface AFFXHttpEngine ()
 
@@ -82,12 +82,12 @@
                             NSString *fileName = [fileInfo fileName];
                             NSString *filePath = [fileInfo filePath];
                             NSString *miniType = [fileInfo mimeType];
-                            if ([FXFileUtiles existFile:filePath]) {
+                            if ([FXFileUtils existFile:filePath]) {
                                 [formData appendPartWithFileData:[NSData dataWithContentsOfFile:filePath] name:key fileName:fileName mimeType:miniType];
                             }
                         } else if ([val isKindOfClass:[NSString class]]) {
                             NSString *filePath = (NSString*)val;
-                            if ([FXFileUtiles existFile:filePath]) {
+                            if ([FXFileUtils existFile:filePath]) {
                                 [formData appendPartWithFormData:[NSData dataWithContentsOfFile:filePath] name:key];
                             }
                         }
