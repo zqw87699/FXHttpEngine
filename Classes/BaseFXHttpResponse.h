@@ -10,8 +10,7 @@
 #import "IFXHttpResponse.h"
 #import "FXLogMacros.h"
 #import "FXJsonUtiles.h"
-#import "BaseFXObject.h"
 
-@interface BaseFXHttpResponse : BaseFXObject<IFXHttpResponse>
+@interface BaseFXHttpResponse : NSObject<IFXHttpResponse>
 
 @end

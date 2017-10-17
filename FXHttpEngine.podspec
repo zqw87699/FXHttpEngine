@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "FXHttpEngine"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "http引擎"
 
   s.homepage     = "https://github.com/zqw87699/FXHttpEngine"
@@ -30,6 +30,7 @@ end
 
   s.dependency "FXLog"
   s.dependency "FXUtils"
+  s.dependency "FXJson"
   s.dependency "ReactiveObjC", '2.1.2'
   s.dependency "AFNetworking", '3.1.0'
 

@@ -9,8 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IFXHttpRequest.h"
 #import "FXLogMacros.h"
-#import "BaseFXObject.h"
 
-@interface BaseFXHttpRequest : BaseFXObject<IFXHttpRequest>
+@interface BaseFXHttpRequest : NSObject<IFXHttpRequest>
 
 @end
